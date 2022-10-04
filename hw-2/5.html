@@ -31,8 +31,71 @@ Infinity делать не нужно, однако, в случае если б
 -->
 <script>
   "use strict";
+  /**
+   * Производит математическую операцию между первыми двумя аргументами, вид
+   * операции передается третьим аргументом.
+   * @param {number} arg1 - первый аргумент (число).
+   * @param {number} arg2 - второй аргумент (число).
+   * @param {string} operation - операцния выполняемаая над 2мя аргументами 
+   * может быть: "+", "-", "*", "/".
+   * @return {number} - Результат выполнения операции, над первыми двумя 
+   * аргументами. Возвращает NaN при некорректно переданных параметрах в 
+   * operation 
+   */
+  function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+      case "+": return sum(arg1, arg2);
+      case "-": return difference(arg1, arg2);
+      case "*": return multiplication(arg1, arg2);
+      case "/": return division(arg1, arg2);
+      default: return console.log(NaN);
+    }
+  }
+  
+  /**
+   * Получить сумму передаваемых аргументов
+   * @param {number} x - первый аргумент (число).
+   * @param {number} y - второй аргумент (число).
+   * @return {number} - сумма чисел.
+   */
+   function getSum(x, y){
+    return console.log (x + y);
+  }
+  
+  /**
+   * Получить Разность передаваемых аргументов
+   * @param {number} x - первый аргумент (число).
+   * @param {number} y - второй аргумент (число).
+   * @return {number} - Разность чисел.
+   */
+  function getDifference(x, y){
+    if (x > y) {
+      return console.log(x - y);
+    }
+    return console.log(y - x);  
+  }
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  /**
+   * Получить Умножение передаваемых аргументов
+   * @param {number} x - первый аргумент (число).
+   * @param {number} y - второй аргумент (число).
+   * @return {number} - Умножение чисел.
+   */
+  function getMultiplication(x, y){
+    return console.log (x * y);
+  }
+
+  /**
+   * Получить Деление передаваемых аргументов
+   * @param {number} x - первый аргумент (число).
+   * @param {number} y - второй аргумент (число).
+   * @return {number} - Деление чисел.
+   */
+  function getDivision(x, y){
+    return console.log (x / y);
+  }
+
+   mathOperation(4, 6, "#")
 </script>
 </body>
 </html>

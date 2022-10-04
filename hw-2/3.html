@@ -21,7 +21,21 @@
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
-</script>
+  let numA = +prompt('Введите первое число: ');
+  let numB = +prompt('Введите второе число');
+
+  if (numA > 0 && numB > 0) {
+    console.log(numA - numB);
+  }
+
+  else if (numA < 0 && numB < 0) {
+    console.log(numA * numB);
+  }
+
+  else if (numA * numB < 0) {
+    console.log(numA + numB);
+  }
+  
+  </script>
 </body>
 </html>

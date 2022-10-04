@@ -26,12 +26,64 @@
 Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
 не нужно.
 
-Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+Необходимо для всех функций прописать комментарии jsdoc c.
 -->
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  /**
+   * Получить сумму передаваемых аргументов
+   * @param {number} x - первый аргумент (число).
+   * @param {number} y - второй аргумент (число).
+   * @return {number} - сумма чисел.
+   */
+  function getSum(x, y){
+    return console.log (x + y);
+  }
+  
+  /**
+   * Получить Разность передаваемых аргументов
+   * @param {number} x - первый аргумент (число).
+   * @param {number} y - второй аргумент (число).
+   * @return {number} - Разность чисел.
+   */
+  function getDifference(x, y){
+    if (x > y) {
+      return console.log(x - y);
+    }
+    return console.log(y - x);  
+  }
+
+  /**
+   * Получить Умножение передаваемых аргументов
+   * @param {number} x - первый аргумент (число).
+   * @param {number} y - второй аргумент (число).
+   * @return {number} - Умножение чисел.
+   */
+  function getMultiplication(x, y){
+    return console.log (x * y);
+  }
+
+  /**
+   * Получить Деление передаваемых аргументов
+   * @param {number} x - первый аргумент (число).
+   * @param {number} y - второй аргумент (число).
+   * @return {number} - Деление чисел.
+   */
+  function getDivision(x, y){
+    return console.log (x / y);
+  }
+ 
+  /// Тестовые вызовы функций
+  getSum(4, 6);
+  getDifference(3, 5);
+  getDifference(5, 2);
+  getDifference(5, 5);
+  getMultiplication(4, 6);
+  getDivision(3, 5);
+  getDivision(5,4);
+  getDivision(10, 2);
+
 </script>
 </body>
 </html>
